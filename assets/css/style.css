@@ -107,16 +107,19 @@ a {
     margin-left: 18px;
 }
 
-.hero {
-    margin-top: 138px;
+.hero-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #e6f0ff;
+    height: calc(100vh - 90px);
+
+}
+.hero-wrap .info {
+   width: 51%;
 }
 
-.hero .info {
-    width: 559px;
-    height: 371px;
-}
-
-.hero .sub-title {
+.hero-wrap .sub-title {
     color: #687690;
     font-size: 1.8rem;
     font-weight: 500;
@@ -124,21 +127,20 @@ a {
     margin-bottom: 8px;
 }
 
-.hero .title {
+.hero-wrap .title {
     color: #000336;
     font-size: 6.4rem;
     font-weight: 700;
     line-height: 76px;
     margin-bottom: 30px;
-    /* 118.75% */
 }
 
-.hero .info-decs {
+.hero-wrap .info-decs {
     font-size: 1.8rem;
     margin-bottom: 40px;
 }
 
-.hero .info-btn {
+.hero-wrap .info-btn {
     min-width: 170px;
     font-size: 1.3rem;
 }
