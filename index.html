@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="./assets/css/reset.css" />
         <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
         <link rel="stylesheet" href="./assets/css/style.css" />
+        <link rel="stylesheet" href="./assets/css/reponsive.css" />
         <link
             rel="apple-touch-icon"
             sizes="57x57"
@@ -86,19 +87,36 @@
     </head>
 
     <body>
-        <!-- header -->
-        <header class="header">
+        <!-- header PC-->
+        <header class="fixed-header">
             <div class="content">
                 <nav class="navbar">
+                    <!-- menu icon -->
+                    <label for="menucheck" class="menu-button">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512"
+                        >
+                            <path
+                                fill="currentColor"
+                                d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+                            />
+                        </svg>
+                    </label>
+
                     <!-- logo -->
                     <img src="./assets/img/logo.svg" alt="besnik." />
                     <!-- navigation primary -->
-                    <ul>
-                        <li><a href="#!">Home</a></li>
-                        <li><a href="#!">Features</a></li>
-                        <li><a href="#!">Service</a></li>
-                        <li><a href="#!">Listed</a></li>
-                        <li><a href="#!">Contact</a></li>
+                    <ul id="nav-pc">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#feature">Features</a></li>
+                        <li><a href="#guides">Service</a></li>
+                        <li><a href="#stats">Resources</a></li>
+                        <li><a href="#subscribe">Contact</a></li>
+                        <li class="show-on-mobile separation">
+                            <a href="#!">Sign in</a>
+                        </li>
+                        <li class="show-on-mobile"><a href="#!">Sign up</a></li>
                     </ul>
                     <!-- action -->
                     <div class="action">
@@ -106,36 +124,59 @@
                         <a href="#!" class="btn action-btn">Sign up</a>
                     </div>
                 </nav>
-
-                <div class="hero-wrap">
-                    <div class="content">
-                        <div class="info">
-                            <p class="sub-title">Welcome to Besnik Agency</p>
-                            <h1 class="title">
-                                Discover a place you'll love to live.
-                            </h1>
-                            <p class="desc info-decs">
-                                Get the best real estate deals first, before
-                                they hit the mass market! hot foreclosure deals
-                                with one simple search.
-                            </p>
-                            <a href="#!" class="btn info-btn">More About Us</a>
-                        </div>
-
-                        <img
-                            src="./assets/img/houseillustration.svg"
-                            alt="Discover a place
-                    you'll love to live"
-                            class="hero-img"
-                        />
-                    </div>
-                </div>
             </div>
         </header>
 
+        <!-- header Mobile and Taplet -->
+        <header class="header-reponsive">
+            <input
+                type="checkbox"
+                name=""
+                id="menucheck"
+                class="menu-check"
+                hidden
+            />
+            <label for="menucheck" class="overlay"></label>
+            <nav class="menu-drawer">
+                <!-- logo -->
+                <img src="./assets/img/logo.svg" alt="besnik." />
+                <!-- navigation primary -->
+                <ul id="nav-mobile"></ul>
+                <script>
+                    const navPC = document.querySelector("#nav-pc");
+                    const navMobile = document.querySelector("#nav-mobile");
+
+                    navMobile.innerHTML = navPC.innerHTML;
+                </script>
+            </nav>
+        </header>
         <main>
+            <!-- hero -->
+            <div class="hero-wrap" id="hero">
+                <div class="content">
+                    <div class="info">
+                        <p class="sub-title">Welcome to Besnik Agency</p>
+                        <h1 class="title">
+                            Discover a place you'll love to live.
+                        </h1>
+                        <p class="desc info-decs">
+                            Get the best real estate deals first, before they
+                            hit the mass market! HOT FORECLOSURE DEALS with one
+                            simple search
+                        </p>
+                        <a href="#!" class="btn info-btn">More About Us</a>
+                    </div>
+
+                    <img
+                        src="./assets/img/houseillustration.svg"
+                        alt="Discover a place
+                you'll love to live"
+                        class="hero-img"
+                    />
+                </div>
+            </div>
             <!-- clients -->
-            <div class="clients">
+            <div class="clients" id="clients">
                 <div class="content">
                     <div class="row">
                         <!-- log -->
@@ -154,16 +195,16 @@
                         <p>5 Star Ratings (2k+ Review)</p>
                     </div>
                     <div class="row">
-                        <img src="./assets/img/meundies.svg" alt="meundies" />
-                        <img src="./assets/img/slack.svg" alt="slack" />
-                        <img src="./assets/img/amazon.svg" alt="amazon" />
-                        <img src="./assets/img/woo.svg" alt="woo commerce" />
-                        <img src="./assets/img/sitepoint.svg" alt="sitepoint" />
+                        <img class="clients-img" src="./assets/img/meundies.svg" alt="meundies" />
+                        <img class="clients-img" src="./assets/img/slack.svg" alt="slack" />
+                        <img class="clients-img" src="./assets/img/amazon.svg" alt="amazon" />
+                        <img class="clients-img" src="./assets/img/woo.svg" alt="woo commerce" />
+                        <img class="clients-img" src="./assets/img/sitepoint.svg" alt="sitepoint" />
                     </div>
                 </div>
             </div>
             <!-- guides -->
-            <div class="guides">
+            <div class="guides" id="guides">    
                 <div class="content">
                     <h2 class="sub-title title">How its works?</h2>
                     <p class="desc">
@@ -229,7 +270,7 @@
             </div>
 
             <!-- Featured 1 -->
-            <div class="featured">
+            <div class="featured" id="feature">
                 <div class="content">
                     <header>
                         <h2 class="sub-title">Featured Properties</h2>
@@ -353,7 +394,7 @@
                 </div>
             </div>
             <!-- Stats -->
-            <div class="stats">
+            <div class="stats" id="stats">
                 <div class="content">
                     <div class="row">
                         <div class="img-block">
@@ -466,7 +507,7 @@
                 </div>
             </div>
             <!-- Subscribe -->
-            <div class="subscribe">
+            <div class="subscribe" id="subscribe">
                 <div class="content">
                     <div class="subscribe-content">
                         <div class="info">

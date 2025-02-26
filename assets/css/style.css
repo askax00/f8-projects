@@ -12,6 +12,7 @@
 }
 
 html {
+    scroll-behavior: smooth;
     font-size: 62.5%;
 }
 
@@ -22,7 +23,7 @@ body {
 
 /* ========= common ========= */
 .content {
-    width: 1110px;
+    width: min(1110px, 100%);
     max-width: calc(100% - 48px);
     margin-left: auto;
     margin-right: auto;
@@ -62,16 +63,20 @@ a {
 }
 
 /* ========= header ========= */
-.header {
+
+.fixed-header {
+    display: block;
     background: #e6f0ff;
-    height: 100vh;
-    position: relative;
+    padding-top: 26px;
+    position: sticky;
+    top: -26px;
+    z-index: 1;
 }
 
 .navbar {
     display: flex;
     align-items: center;
-    padding-top: 38px;
+    padding: 12px 0;
 }
 
 .navbar ul {
@@ -170,11 +175,8 @@ a {
     font-weight: 500;
 }
 
-.clients .row > img:nth-child(3) {
+.clients-img {
     padding: 33px 39px 23px;
-    border-radius: 12px;
-    background: #fff;
-    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
 }
 
 /* ========= guides ========= */
@@ -316,7 +318,7 @@ a {
 
 .featured .item .body {
     margin-top: 0;
-    padding: 17px 0 0 20px;
+    padding: 17px 0 20px 20px;
 }
 
 .featured .body .desc {
@@ -350,20 +352,13 @@ a {
     padding: 50px 0;
 }
 
-.stats .content {
-    width: 1048px;
-}
-
-.stats .img-block {
-    position: relative;
-}
-
 .stats .row {
     display: flex;
 }
 
-.stats .info {
-    padding: 79px 0 0 165px;
+.stats .row:first-child {
+    align-items: center;
+    justify-content: space-around;
 }
 
 .stats .img-block,
@@ -371,14 +366,21 @@ a {
     width: 50%;
 }
 
+.stats .info {
+    padding: 79px 0 0 165px;
+}
+
+.stats .img-block {
+    position: relative;
+}
+
 .stats .img-block .image {
     display: block;
-    position: relative;
     width: 400px;
     height: 460px;
-    margin-left: auto;
+    object-fit: cover;
     border-radius: 12px;
-    flex-shrink: 0;
+    margin-left: auto;
 }
 
 .stats .info .sub-title {
@@ -416,10 +418,14 @@ a {
     width: 239px;
     height: 252px;
     top: 0;
-    left: 5px;
+    left: 34px;
     background: #fff;
     border-radius: 0 0 12px 12px;
     padding: 45px 22px 44px;
+}
+
+.stats-trend .row {
+    display: flex;
 }
 
 .stats .stats-trend .value {
@@ -432,6 +438,7 @@ a {
 }
 
 .stats .stats-trend .icon {
+    display: inline-block;
     margin-left: auto;
 }
 
@@ -512,7 +519,6 @@ a {
 }
 
 .subscribe-content .info {
-    width: 671px;
     max-width: 100%;
     padding: 0 90px 0 80px;
 }

@@ -1,0 +1,258 @@
+/* PC */
+@media screen and (min-width: 992px) {
+    .menu-button svg {
+        display: none;
+    }
+
+    .show-on-mobile {
+        display: none;
+    }
+
+    .menu-drawer {
+        display: none;
+    }
+}
+
+/* Mobile and Tablet */
+@media screen and (max-width: 991.98px) {
+    .menu-button svg {
+        width: 24px;
+        color: var(--desc-color);
+    }
+
+    .navbar ul {
+        display: none;
+    }
+
+    .navbar img {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .overlay {
+        position: fixed;
+        inset: 0;
+        background: #333;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.5s ease;
+        z-index: 2;
+    }
+
+    .menu-drawer {
+        position: fixed;
+        inset: 0 40% 0 0;
+        background: #fff;
+        padding: 40px;
+        transform: translateX(-100%);
+        transition: 0.5s ease;
+        z-index: 2;
+    }
+
+    .menu-drawer ul {
+        margin-top: 20px;
+    }
+
+    .menu-drawer ul a {
+        display: block;
+        color: #4f5361;
+        font-size: 1.6rem;
+        font-weight: 500;
+        padding: 14px 0;
+    }
+
+    .separation {
+        border-top: 1px solid #ccc;
+    }
+
+    .menu-check:checked ~ .overlay {
+        opacity: 0.7;
+        visibility: visible;
+    }
+
+    .menu-check:checked ~ .menu-drawer {
+        transform: translateX(0%);
+    }
+
+    .hero-wrap img {
+        display: none;
+    }
+    .hero-wrap .info {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 80%;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-wrap .info .desc {
+        width: 80%;
+    }
+
+    .clients .content .row:last-child {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .featured .content .list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .featured .item .body {
+        margin-top: 0;
+        padding: 17px 0 20px 20px;
+    }
+
+    .stats .row {
+        align-items: center;
+    }
+
+    .stats .info {
+        width: 100%;
+        padding: 0;
+    }
+
+    .stats .row:first-child {
+        flex-direction: column-reverse;
+    }
+
+    .stats .info .sub-title {
+        width: 70%;
+    }
+
+    .stats .row .info .desc {
+        width: 100%;
+    }
+
+    .stats .row .img-block {
+        width: 100%;
+        margin-top: 80px;
+    }
+
+    .stats-trend {
+        left: 24px;
+    }
+
+    .stats .stats-trend .row {
+        align-items: stretch;
+    }
+
+    .stars .qty-item {
+        font-size: 50px;
+    }
+
+    .stars .qty-desc {
+        font-size: 16px;
+    }
+
+    .subscribe .subscribe-img {
+        display: none;
+    }
+
+    .footer .menu {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 50px;
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 992.98px) {
+    .show-on-mobile {
+        display: none;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 767.98px) {
+    .content {
+        max-width: calc(100% - 48px);
+    }
+
+    .header .action {
+        display: none;
+    }
+
+    .menu-drawer {
+        position: fixed;
+        inset: 0 25% 0 0;
+        background: #fff;
+        padding: 40px;
+        transform: translateX(-100%);
+        transition: 0.5s ease;
+    }
+
+    .navbar .action {
+        display: none;
+    }
+
+    .hero-wrap .info .title {
+        font-size: 5.2rem;
+        line-height: 1.2;
+        margin-top: 20px;
+    }
+
+    .hero-wrap .info .desc {
+        width: 100%;
+    }
+    
+    .clients .row:nth-child(2) {
+        display: block;
+    }
+
+    .clients .row:nth-child(2) p:last-child {
+        display: none;
+    }
+
+    .guides .list-guides {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .featured .link {
+        display: none;
+    }
+
+    .featured .content .list {
+        display: block;
+    }
+
+    .featured .content .list .item + .item {
+        margin-top: 30px;
+    }
+
+    .stats .row:nth-child(2) {
+        flex-direction: column;
+    }
+
+    .stats .info .sub-title {
+        width: 80%;
+    }
+ 
+    .stats .info .sub-title {
+        width: 100%;
+    }
+
+    .stats .img-block .image {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .subscribe-content .info {
+        padding: 24px;
+    }
+
+    .footer .menu {
+        display: block;
+    }
+
+    .footer .sub-footer {
+        flex-direction: column;
+        gap: 30px;
+        align-items: flex-start ;
+    }
+}
